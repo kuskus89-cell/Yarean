@@ -5,96 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yarean</title>
     <link rel ="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-<header class="hero">
+  <header>
   <nav class="navbar">
     <ul class="nav-links">
       <li><a href="welcoming.html">Home</a></li>
-      <li><a href="ingredients.html">Ingredients</a></li>
       <li><a href="explore.html">Explore More</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
+
+    <div class="search-container">
+      <input type="text" placeholder="What's in your kitchen?" class="search-input">
+      <button class="search-btn">Search</button>
+    </div>
 
     <div class="auth-buttons">
       <a href="login.html" class="login-btn">Login</a>
       <a href="signup.html" class="signup-btn">Sign Up</a>
     </div>
   </nav>
-  <div class="introduction">
-    <h1>
-      Cook with what you have. Discover with what you love 
-      <i class="fa fa-fire" aria-hidden="true"></i>
-    </h1>
-
-    <h2>
-      No more searching for complex recipes. Just enter your ingredients and let Yarean find the perfect meal for you.
-    </h2>
-
-    <div class="search-container">
-      <input 
-        type="text" 
-        placeholder="What's in your kitchen?" 
-        name="search" 
-        class="search-input"
-      >
-      <button class="search-btn">Search</button>
-    </div>
-  </div>
 </header>
+<section class="hero">
+<div class="hero-text">
+    <marquee behavior="scroll" direction="left">Welcome to Yarean - Your Culinary Companion!</marquee>
+  <div class="wrapper">
+      <div class="profile">
+      
+      </div>
+    <div class="intro">
+        <h1>
+      <b>Cook with what you have.</b>
+      </h1>
+      <p>
+      No more searching for complex recipes. Just enter your ingredients and let Yarean find the perfect meal for you.
+      </p>
+      <button class="explore-btn" onclick="location.href='explore.html'">Explore Now</button>
+     </div>
+  </div>
+</div>
+</section>
 
-<section class ="browse">
-     <h1>Browse by category</h1> 
-     <h3>Explore recipes from Kenya and Somalia with different flavors and traditions</h3> 
-    <div class="country-cards"> 
-        <div class="card"> 
-            <img src="images/hero image for kenya category.jpeg" alt="Kenyan Cuisine">
-             <div class="card-content"> 
-                <h2>Kenya</h2> 
-                <p>Discover the rich and diverse flavors of Kenyan cuisine, from hearty stews to flavorful grilled meats.</p> 
-                <div class="card-content-btn"> 
-                    <a href="explore.html" class="explore-btn">Explore</a>
-                </div> 
-            </div>
-        </div> 
-        <div class="card">
-            
-             <img src="images/intro to somali food.jpeg" alt="Somalian Cuisine"> 
-            
-             <div class="card-content"> 
-                <h2>Somalia</h2>
-                 <p>Experience the vibrant and aromatic dishes of Somali cuisine, featuring a blend of spices and fresh ingredients.</p> 
-                 <div class="card-content-btn"> 
-                    <a href="explore.html" class="explore-btn">Explore</a> 
-                </div> 
-            </div>
-        </div>
-        <div class="card">
-            
-             <img src="images/food.jpeg" alt="Quick Recipes"> 
-           
-             <div class="card-content"> 
-                <h2>Quick Meals</h2>
-                 <p>Discover these recipes for when you are in a hurry.Try them and be in the go.</p> 
-                 <div class="card-content-btn"> 
-                    <a href="explore.html" class="explore-btn">Explore</a> 
-                </div> 
-            </div>
-        </div> 
-        <div class="card"> 
-            
-            <img src="images/download.jpg" alt="More on Yarean">
-           
-            <div class="card-content"> 
-                <h2>Curious! Learn more about Yarean</h2> 
-                <p>Yarean is for everyone.Here's why?</p> 
-                <div class="card-content-btn"> 
-                    <a href="about.html" class="ClickMe-btn">Click Me</a> 
-                </div> 
-            </div>
-        </div>
+<section class="browse">
+  <div class="browse-cards">
+    <div class="browse-card" onclick="location.href='kenya.html'">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+          <path d="M3 12h18"></path>
+          <path d="M5 12a7 7 0 0 0 14 0"></path>
+        </svg>
+      </div>
+
+      <h3>Kenyan Cuisine</h3>
+      <p>
+        Discover traditional and modern Kenyan dishes made with love and local ingredients.
+      </p>
+
+      <span class="highlight green">Authentic Flavors</span>
     </div>
+
+ 
+    <div class="browse-card" onclick="location.href='somalia.html'">
+      <div class="icon">
+       
+        <svg viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2">
+          <path d="M12 2C8 7 5 9 5 14a7 7 0 0 0 14 0c0-5-3-7-7-12z"></path>
+        </svg>
+      </div>
+
+      <h3>Somalian Cuisine</h3>
+      <p>
+        Experience flavorful coastal and inland Somalian specialties.
+      </p>
+
+      <span class="highlight yellow">Bold Taste</span>
+    </div>
+    
+   
+    <div class="browse-card" onclick="location.href='uganda.html'">
+      <div class="icon">
+    
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
+          <path d="M11 20C11 20 4 13 4 8a6 6 0 0 1 12 0c0 5-5 12-5 12z"></path>
+        </svg>
+      </div>
+
+      <h3>Quick Meals</h3>
+      <p>
+        Discover what you can quickly whip up with your pantry staples, from simple snacks to hearty meals.
+      </p>
+
+      <span class="highlight light-green">Rich Traditions</span>
+    </div>
+
+  </div>
 </section>
 
        
@@ -105,7 +110,7 @@
   <div class="trending-cards">
 
     <div class="recipe-card">
-      <img src="images/bariis dooro.jpeg" alt="Chicken Biryani">
+      <img src="images/Jahan Ara's Kitchen.jpg" alt="Chicken Biryani">
 
       <div class="recipe-info">
         <h3>Chicken Biryani</h3>
@@ -119,7 +124,7 @@
     </div>
 
     <div class="recipe-card">
-      <img src="images/malamax.jpeg" alt="Malawah">
+      <img src="images/Somali Malawax ( Crepes ) Somali food, Cunto….jpg" alt="Malawah">
 
       <div class="recipe-info">
         <h3>Malawah</h3>
@@ -127,28 +132,25 @@
         <div class="stars">
           ★★★★☆ <span>(4.2)</span>
         </div>
-
         <p>Soft Somali pancake served with tea.</p>
       </div>
     </div>
 
+    <div class="recipe-card">
+      <img src="images/smocha.jpeg" alt="Smocha">
+
+      <div class="recipe-info">
+        <h3>Smocha</h3>
+
+        <div class="stars">
+          ★★★★☆ <span>(4.2)</span>
+        </div>
+        <p>Soft Kenyan sausage that is a popular street food.</p>
+      </div>1
+    </div>
+
   </div>
 </section>
-
-
-        <section class="welcome-section">
-        <div class="welcoming">
-            <h1>Ready to cook smarter?</h1>
-            <h2>Join thousands of home cooks who are discovering new recipes with Yarean.</h2>
-            <div class="btn">
-                <a href="signup.html" class="btn-link">Get Started for Free</a>
-                </div>
-                <div class="btn">
-               <a href="explore.html" class="btn-link">Learn More</a>
-               </div>
-            </div>
-        </div>
-        </section>
 
 <footer class="footer">
 <div class="footer-container">
@@ -156,7 +158,7 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="welcoming.html">Home</a></li>
-        <li><a href="ingredients.html">Recipes</a></li>
+        <li><a href="explore.html">Recipes</a></li>
         <li><a href="explore.html">Categories</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -168,7 +170,7 @@
       <p>Nairobi, Kenya</p>
     <div class="social-icons">
     <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/sundus-noor--9426a2390/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.linkedin.com/in/sundus-noor--9426a2390/" target="_blank"><i class=" fab fa-linkedin-in"></i></a>
     <a href="mailto:sundusnoor89@gmail.com"> <i class="fas fa-envelope"></i></a>
     </div>
     </div>
