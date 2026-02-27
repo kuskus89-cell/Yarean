@@ -13,7 +13,7 @@ const shoppingSection = document.getElementById('shopping-section');
 // --- 2. INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
-});
+
 
 // --- 3. SEARCH & CATEGORY LOGIC ---
 async function getMeals(searchTerm) {
@@ -223,3 +223,4 @@ document.getElementById('clear-list').onclick = () => {
     localStorage.removeItem('shoppingList');
     renderShoppingList();
 };
+});
