@@ -17,7 +17,7 @@
     </ul>
 
     <div class="search-container">
-      <input type="text" placeholder="What's in your kitchen?" class="search-input">
+      <input type="text" placeholder="What are you craving for today?" class="search-input">
       <button class="search-btn">Search</button>
     </div>
 
@@ -25,31 +25,26 @@
       <a href="login.html" class="login-btn">Login</a>
       <a href="signup.html" class="signup-btn">Sign Up</a>
     </div>
-  </nav>
-</header>
+    </nav>
+    </header>
+  
 <section class="hero">
 <div class="hero-text">
-    <marquee behavior="scroll" direction="left">Welcome to Yarean - Your Culinary Companion!</marquee>
-  <div class="wrapper">
-      <div class="profile">
-      
-      </div>
     <div class="intro">
         <h1>
-      <b>Cook with what you have.</b>
+      Cook with what you have.
       </h1>
       <p>
       No more searching for complex recipes. Just enter your ingredients and let Yarean find the perfect meal for you.
       </p>
-      <button class="explore-btn" onclick="location.href='explore.html'">Explore Now</button>
-     </div>
-  </div>
+      <button class="explore-btn" id="explore-now-btn">Explore Now</button>
+    </div>
 </div>
 </section>
 
 <section class="browse">
   <div class="browse-cards">
-    <div class="browse-card" onclick="location.href='kenya.html'">
+    <div class="browse-card" id="browse-card-Kenyan">
       <div class="icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
           <path d="M3 12h18"></path>
@@ -66,7 +61,7 @@
     </div>
 
  
-    <div class="browse-card" onclick="location.href='somalia.html'">
+    <div class="browse-card" id="browse-card-Somali">
       <div class="icon">
        
         <svg viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2">
@@ -83,7 +78,7 @@
     </div>
     
    
-    <div class="browse-card" onclick="location.href='uganda.html'">
+    <div class="browse-card" id="browse-card-QuickMeals">
       <div class="icon">
     
         <svg viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
@@ -104,7 +99,7 @@
 
        
 <section class="trending">
-  <h1>🔥 Trending Recipes</h1>
+  <h2>🔥 Trending Recipes</h2>
   <p>Most loved meals right now</p>
 
   <div class="trending-cards">
@@ -146,11 +141,17 @@
           ★★★★☆ <span>(4.2)</span>
         </div>
         <p>Soft Kenyan sausage that is a popular street food.</p>
-      </div>1
+      </div>
     </div>
 
   </div>
 </section>
+<div id="meal-modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
 
 <footer class="footer">
 <div class="footer-container">
@@ -187,6 +188,6 @@
     © 2026 Yarean. All rights reserved.
   </div>
 </footer>
-
+<script src="index.js"></script>
 </body>
 </html>

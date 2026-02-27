@@ -3,28 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore More</title>
+    <title>Yarean | Your Culinary Companion</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    <header>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="welcoming.html">Home</a></li>
-      <li><a href="explore.html">Explore More</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
 
-    <div class="search-container">
-      <input type="text" placeholder="What's in your kitchen?" class="search-input">
-      <button class="search-btn">Search</button>
-    </div>
+<header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="welcoming.html">Home</a></li>
+            <li><a href="explore.html">Explore More</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
 
-    <div class="auth-buttons">
-      <a href="login.html" class="login-btn">Login</a>
-      <a href="signup.html" class="signup-btn">Sign Up</a>
-    </div>
-  </nav>
+        <div class="search-box">
+            <input type="text" id="user-input" placeholder="What are you craving for today?" class="search-input">
+        </div>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
 </header>
+
+<main>
+<aside class="sub-nav-container">
+  <div class="sub-nav">
+        <button id="show-explore" class="nav-active">Explore</button>
+        <button id="show-favorites">My Favorites ❤️</button>
+        <button id="show-shopping">Shopping List 🛒</button>
+    </div>
+</aside>
+        <section class="categories-section container">
+            <h2>Browse Categories</h2>
+            <div id="category-grid" class="grid-layout">
+                </div>
+        </section>
+    <section id="favorites-section" class="container">
+        <h2>My Saved Recipes</h2>
+        <div id="favorites-grid" class="grid-layout">
+            </div>
+    </section>
+
+    <section id="shopping-section" class="container">
+        <h2>My Shopping List</h2>
+        <div class="shopping-card">
+            <ul id="shopping-list-items" class="shopping-list">
+                </ul>
+            <button id="clear-list" class="clear-btn">Clear List</button>
+        </div>
+    </section>
+</main>
+
+<div id="meal-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-body">
+            </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="welcoming.html">Home</a></li>
+                <li><a href="explore.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Let's Chat</h3>
+            <p>Email: info@yarean.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Subscribe</h3>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2026 Yarean. All rights reserved.</div>
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>
