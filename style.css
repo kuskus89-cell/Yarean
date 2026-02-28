@@ -474,14 +474,14 @@ body {
     border-radius: 30px;
     border: none;
     background: var(--primary);
-    color: hsl(30, 93%, 45%);
+    color: hsl(60, 2%, 8%);
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .search-box button:hover {
-    background: black;
+    background: rgb(103, 10, 10);
 }
 
 /* Grid Layouts */
@@ -640,3 +640,4 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Mini menu nav look */

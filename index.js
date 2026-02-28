@@ -59,6 +59,19 @@ async function filterByCategory(category) {
     displayMeals(data.meals); 
 }
 
+// Optional: If you want a separate category menu (not just cards), you can use this function to render it
+function renderCategories(categories) {
+  const menu = document.getElementById("category-menu");
+
+  menu.innerHTML = categories
+    .map(cat => `
+      <li class="category-item" data-category="${cat.strCategory}">
+        ${cat.strCategory}
+      </li>
+    `)
+    .join("");
+}
+
 // --- 4. CORE DISPLAY FUNCTION ---
 function displayMeals(meals) {
     resultsContainer.innerHTML = ""; 
@@ -206,11 +219,23 @@ searchBtn.addEventListener('click', () => {
     if (term) getMeals(term);
 });
 
+//Instea
+const categoryMenu = document.getElementById("category-menu");
+
+categoryMenu.addEventListener("click", (e) => {
+  const item = e.target.closest(".category-item");
+  if (!item) return;
+
+  const category = item.dataset.category;
+
+  fetchMealsByCategory(category);
+});
+
 randomBtn.addEventListener('click', async () => {
     const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
     const data = await response.json();
     showView('explore');
-    resultsTitle.innerText = "Chef's Choice: Random Meal";
+    resultsTitle.innerText = "Chef's Choice: Bon appétit!";
     displayMeals(data.meals);
     resultsSection.scrollIntoView({ behavior: 'smooth' });
 });

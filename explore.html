@@ -19,6 +19,7 @@
 
         <div class="search-box">
             <input type="text" id="user-input" placeholder="What are you craving for today?" class="search-input">
+                <button id="search-btn">Search</button>
         </div>
 
         <div class="auth-buttons">
@@ -35,12 +36,24 @@
     </div>
 <div class="sub-nav-container">
   <div class="sub-nav">
+        <button id="random-btn">Surprise Me</button>
         <button id="show-explore" class="nav-active">Explore</button>
         <button id="show-favorites">My Favorites ❤️</button>
         <button id="show-shopping">Shopping List 🛒</button>
     </div>
 </div>
 </section>
+<div class="layout">
+  <aside class="sidebar">
+    <ul id="category-menu"></ul>
+  </aside>
+
+  <main>
+    <h2 id="results-title"></h2>
+    <div id="results-container"></div>
+  </main>
+</div>
+
         <section class="categories-section container">
             <h2>Browse Categories</h2>
             <div id="category-grid" class="grid-layout">
@@ -51,7 +64,7 @@
          <h2 id="results-title"></h2>
          <div id="results-container" class="grid-layout"></div>
         </section>
-        
+
     <section id="favorites-section" class="container">
         <h2>My Saved Recipes</h2>
         <div id="favorites-grid" class="grid-layout">
