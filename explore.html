@@ -26,21 +26,32 @@
             <a href="signup.html" class="signup-btn">Sign Up</a>
         </div>
     </nav>
-</header>
-
-<main>
-<aside class="sub-nav-container">
+    </header>
+    
+<section class="explore" aria-label="Hero Section">
+    <div class="hero-text">
+        <h1>Discover Delicious Recipes with Yarean</h1>
+        <p>Your culinary companion for easy, affordable, and tasty meals.</p>
+    </div>
+<div class="sub-nav-container">
   <div class="sub-nav">
         <button id="show-explore" class="nav-active">Explore</button>
         <button id="show-favorites">My Favorites ❤️</button>
         <button id="show-shopping">Shopping List 🛒</button>
     </div>
-</aside>
+</div>
+</section>
         <section class="categories-section container">
             <h2>Browse Categories</h2>
             <div id="category-grid" class="grid-layout">
-                </div>
+            </div>
         </section>
+
+       <section class="results-section container">
+         <h2 id="results-title"></h2>
+         <div id="results-container" class="grid-layout"></div>
+        </section>
+        
     <section id="favorites-section" class="container">
         <h2>My Saved Recipes</h2>
         <div id="favorites-grid" class="grid-layout">
@@ -55,7 +66,6 @@
             <button id="clear-list" class="clear-btn">Clear List</button>
         </div>
     </section>
-</main>
 
 <div id="meal-modal" class="modal">
     <div class="modal-content">
@@ -95,6 +105,6 @@
     <div class="footer-bottom">© 2026 Yarean. All rights reserved.</div>
 </footer>
 
-<script src="index.js"></script>
+<script src="index.js" defer></script>
 </body>
 </html>

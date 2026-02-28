@@ -13,7 +13,15 @@ const shoppingSection = document.getElementById('shopping-section');
 // --- 2. INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
+});
 
+    // Fetching everything from state instead of localStorage directly in functions to ensure we always have the latest data
+    let state = {
+    view: "explore",
+    meals: [],
+    favorites: JSON.parse(localStorage.getItem('myMeals')) || [],
+    shoppingList: JSON.parse(localStorage.getItem('shoppingList')) || []
+};
 
 // --- 3. SEARCH & CATEGORY LOGIC ---
 async function getMeals(searchTerm) {
@@ -105,12 +113,18 @@ function loadFavorites() {
             <img src="${meal.thumb}" alt="${meal.name}">
             <h3>${meal.name}</h3>
             <div class="card-buttons">
-                <button onclick="getMealDetails('${meal.id}')">View</button>
-                <button class="fav-btn" onclick="removeFromFavorites('${meal.id}')">❌</button>
+                <button class="view-btn" data-id="${meal.id}">View</button>
+                <button class="fav-btn" data-id="${meal.id}">❌</button>
             </div>
         </div>
     `).join('');
 }
+
+resultsContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('view-btn')) {
+        getMealDetails(e.target.dataset.id);
+    }
+});
 
 function removeFromFavorites(mealId) {
     let favorites = JSON.parse(localStorage.getItem('myMeals')) || [];
@@ -170,7 +184,7 @@ async function getMealDetails(id) {
             ingredientsHTML += `
                 <li>
                     ${measure} ${ingredient} 
-                    <button class="add-ing-btn" onclick="addToShoppingList('${itemString}')">+</button>
+                    <button class="add-ing-btn" data-id="${itemString}">+</button>
                 </li>`;
         }
     }
@@ -223,4 +237,3 @@ document.getElementById('clear-list').onclick = () => {
     localStorage.removeItem('shoppingList');
     renderShoppingList();
 };
-});
