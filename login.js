@@ -42,3 +42,41 @@ form.addEventListener("submit", function (e) {
         message.textContent = "Invalid email or password.";
     }
 });
+//Google Sign-In callback
+function handleGoogleLogin(response) {
+    console.log("Login Sucess");
+   localStorage.setItem("googleUser", response.credential);
+     alert("Login Successful! Redirecting...");
+     window.location.href = "welcoming.html"; // redirect to homepage
+}
+//incase the user forgots his password
+const modal = document.getElementById("resetModal");
+const forgotBtn = document.getElementById("forgotPassword");
+const closeBtn = document.querySelector(".close");
+const sendReset = document.getElementById("sendReset");
+
+forgotBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+sendReset.addEventListener("click", () => {
+    const email = document.getElementById("resetEmail").value;
+
+    if (email.length < 5) {
+        alert("Enter a valid email");
+        return;
+    }
+
+    alert("Reset link sent to " + email + " (demo)");
+    modal.style.display = "none";
+});
