@@ -220,16 +220,7 @@ searchBtn.addEventListener('click', () => {
 });
 
 //Instea
-const categoryMenu = document.getElementById("category-menu");
 
-categoryMenu.addEventListener("click", (e) => {
-  const item = e.target.closest(".category-item");
-  if (!item) return;
-
-  const category = item.dataset.category;
-
-  fetchMealsByCategory(category);
-});
 
 randomBtn.addEventListener('click', async () => {
     const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
@@ -262,3 +253,4 @@ document.getElementById('clear-list').onclick = () => {
     localStorage.removeItem('shoppingList');
     renderShoppingList();
 };
+

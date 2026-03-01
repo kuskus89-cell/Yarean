@@ -1,13 +1,20 @@
-*{
-  margin:0px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --primary: #ff6347;
+    --dark: #2d3436;
+    --light: #f9f9f9;
+    --shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 .hero{
@@ -31,6 +38,7 @@ body {
   letter-spacing:7px;
   cursor: pointer;
   margin-bottom:20px;
+  color: white; 
 
 }
 
@@ -38,6 +46,16 @@ body {
   font-size:18px;
   margin-bottom:30px;
   color:white;
+}
+
+.logo {
+    height: 80px;     
+    width: auto;     
+    object-fit: contain;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .navbar {
@@ -292,6 +310,19 @@ body {
   transform: scale(1.2);
 }
 
+.footer-logo {
+    height: 70px;
+    width: auto;
+    display: block;
+    margin-bottom: 15px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
@@ -417,7 +448,7 @@ body {
 
 .value-card:hover{
   transform: translateY(-10px);
-  border-color: rgba(185, 130, 20, 0.2);
+ 
 }
 
 /* Explore Page */
@@ -454,7 +485,7 @@ body {
 .search-box {
     display: flex;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    
     padding: 15px;
     border-radius: 50px;
     backdrop-filter: blur(10px);
@@ -518,6 +549,43 @@ body {
 
 .cat-card h3 { margin-top: 15px; font-size: 1.2rem; }
 
+/* Results Container */
+.results-section{
+  padding:60px 0;
+}
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+.results-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:25px;
+}
+.meal-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+.meal-card:hover{
+  transform: translateY(-6px);
+}
+.meal-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display:block;
+}
+.meal-info{
+  padding: 15px;
+}
+.meal-info h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
 /* Favourite Recipes */
 .card-buttons {
     display: flex;
@@ -635,7 +703,7 @@ body {
 
 
 /* Login Page Styles */
-body.login.page{
+body.Login.page{
   background-color: #0d0d0d;
   display:flex;
   justify-content:center;
@@ -682,13 +750,13 @@ body.login.page{
   transform: translateY(-50%);
   transition:0.4s;
 }
-input-box input:focus + span,
-input-box input:not(:placeholder-shown) + span{ 
+.input-box input:focus + span,
+.input-box input:not(:placeholder-shown) + span{ 
 top:5px;
 font-size: 12px;
 color: #00ffff;
 }
-submit-btn{
+.submit-btn{
   background: linear-gradient(90deg, #00ffff, #00ff80);
   border:none;
   padding:12px 20px;
@@ -699,7 +767,7 @@ submit-btn{
   transition: 0.4s;
   margin-top: 10px;
 }
-submit-btn:hover{
+.submit-btn:hover{
   background: linear-gradient(90deg, #00ff80, #00ffff);
   box-shadow: 0 5px 15px #00ffff80;
 }
