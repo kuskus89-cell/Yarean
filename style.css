@@ -526,7 +526,7 @@ body {
 
 /* Category Cards */
 .cat-card {
-    background: white;
+    background: rgb(203, 228, 14);
     border-radius: 20px;
     padding: 20px;
     text-align: center;

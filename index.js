@@ -138,6 +138,11 @@ resultsContainer.addEventListener('click', (e) => {
         getMealDetails(e.target.dataset.id);
     }
 });
+resultsContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fav-btn')) {
+        removeFromFavorites(e.target.dataset.id);
+    }
+});
 
 function removeFromFavorites(mealId) {
     let favorites = JSON.parse(localStorage.getItem('myMeals')) || [];
